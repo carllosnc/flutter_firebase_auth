@@ -34,8 +34,8 @@ class _AppButtonState extends State<AppButton> {
         onPressed: null,
         child: SizedBox(
           width: width,
-          child: const Column(
-            children: [
+          child: Column(
+            children: const [
               SizedBox(
                 width: 20,
                 height: 20,
