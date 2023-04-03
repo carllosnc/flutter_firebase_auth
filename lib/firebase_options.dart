@@ -4,8 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
 /// Example:
@@ -51,22 +49,24 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static FirebaseOptions android = FirebaseOptions(
-    apiKey: dotenv.get('ANDROID_apiKey'),
-    appId: dotenv.get('ANDROID_appId'),
-    messagingSenderId: dotenv.get('ANDROID_messagingSenderId'),
-    projectId: dotenv.get('ANDROID_projectId'),
-    storageBucket: dotenv.get('ANDROID_storageBucket'),
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCCqUZZ-fSSnN4jvg7rhkLUCfM1cabJNys',
+    appId: '1:262101631114:android:355b2b0eacb80317e5ed73',
+    messagingSenderId: '262101631114',
+    projectId: 'cnc-flutter-firebase',
+    storageBucket: 'cnc-flutter-firebase.appspot.com',
   );
 
-  static FirebaseOptions ios = FirebaseOptions(
-    apiKey: dotenv.get('IOS_apiKey'),
-    appId: dotenv.get('IOS_appId'),
-    messagingSenderId: dotenv.get('IOS_messagingSenderId'),
-    projectId: dotenv.get('IOS_projectId'),
-    storageBucket: dotenv.get('IOS_storageBucket'),
-    androidClientId: dotenv.get('IOS_androidClientId'),
-    iosClientId: dotenv.get('IOS_iosClientId'),
-    iosBundleId: dotenv.get('IOS_iosBundleId'),
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBJq56KURaUhBZKc_ITdcikoTauDsfk5Ec',
+    appId: '1:262101631114:ios:0795b71d75db3b88e5ed73',
+    messagingSenderId: '262101631114',
+    projectId: 'cnc-flutter-firebase',
+    storageBucket: 'cnc-flutter-firebase.appspot.com',
+    androidClientId:
+        '262101631114-hu7pa8enp8bj3jge3hqusjd01vt725pl.apps.googleusercontent.com',
+    iosClientId:
+        '262101631114-kcj6cath24a17ulvt0oo9pu8he5pdof4.apps.googleusercontent.com',
+    iosBundleId: 'com.flutterFirebase',
   );
 }
